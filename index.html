@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shama | Content Creator Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Config for Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#1e3a8a',    /* Deep Navy */
+                            pink: '#be185d',    /* Magenta/Pink from Sari */
+                            cream: '#fdfbf7',   /* Soft Cream Background */
+                            light: '#fff1f2',   /* Very light pink tint */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for nuances not covered by Tailwind utilities */
+        body {
+            background-color: #fdfbf7;
+        }
+        
+        .blob-mask {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            transition: border-radius 0.5s ease;
+        }
+        .blob-mask:hover {
+            border-radius: 50%;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Smooth reveal animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-heading font-bold text-2xl text-brand-pink">Shama<span class="text-brand-navy">.</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#meet" class="text-brand-navy hover:text-brand-pink font-medium transition">About</a>
+                    <a href="#create" class="text-brand-navy hover:text-brand-pink font-medium transition">Content</a>
+                    <a href="#impact" class="text-brand-navy hover:text-brand-pink font-medium transition">Impact</a>
+                    <a href="#brands" class="text-brand-navy hover:text-brand-pink font-medium transition">Brands</a>
+                    <a href="#contact" class="px-5 py-2 rounded-full bg-brand-pink text-white font-medium hover:bg-pink-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Let's Talk</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-pink focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#meet" class="block px-4 py-3 text-brand-navy hover:bg-pink-50">About</a>
+            <a href="#create" class="block px-4 py-3 text-brand-navy hover:bg-pink-50">Content</a>
+            <a href="#impact" class="block px-4 py-3 text-brand-navy hover:bg-pink-50">Impact</a>
+            <a href="#brands" class="block px-4 py-3 text-brand-navy hover:bg-pink-50">Brands</a>
+            <a href="#contact" class="block px-4 py-3 text-brand-pink font-bold hover:bg-pink-50">Let's Talk</a>
+        </div>
+    </nav>
+
+    <!-- SLIDE 1: Meet Shama -->
+    <!-- Image Used: WhatsApp Image 2025-12-06 at 12.42.58.jpeg (Pink Sari Headshot) -->
+    <section id="meet" class="min-h-screen pt-24 pb-12 flex items-center relative overflow-hidden bg-brand-cream">
+        <!-- Decorative shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-light rounded-full opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-50 rounded-full opacity-50 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="order-2 md:order-1 space-y-6 reveal">
+                    <div class="inline-block px-4 py-1 rounded-full bg-blue-100 text-brand-navy font-semibold text-sm tracking-wide mb-2">
+                        BASED IN THE UK 🇬🇧
+                    </div>
+                    <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-brand-navy leading-tight">
+                        Meet <span class="text-brand-pink">Shama</span> 🌸
+                    </h1>
+                    <p class="text-xl text-gray-600 font-light">
+                        Indian Creator • Travel • Lifestyle • Food
+                    </p>
+                    
+                    <div class="space-y-4 pt-4 border-l-4 border-brand-pink pl-6">
+                        <p class="text-lg text-gray-700">
+                            <span class="font-bold text-brand-navy">Fun + relatable + storytelling content</span> that connects cultures.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            <span class="font-bold text-brand-pink text-2xl">2M</span> views in last 30 days
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Audience age <span class="font-semibold text-brand-navy">18–34</span>, mainly India, UK & US
+                        </p>
+                    </div>
+
+                    <div class="pt-6">
+                        <span class="text-gray-400 text-sm font-heading tracking-widest uppercase">Tone: Warm • Fun • Friendly</span>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="order-1 md:order-2 flex justify-center reveal delay-200">
+                    <div class="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
+                        <div class="absolute inset-0 bg-brand-pink rounded-full opacity-10 blur-lg transform translate-x-4 translate-y-4"></div>
+                        <!-- Headshot: Shama in Pink Sari -->
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58.jpeg" alt="Shama Headshot" class="blob-mask w-full h-full object-cover shadow-2xl relative z-10 border-4 border-white">
+                        
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg z-20 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                            <i class="fab fa-instagram text-3xl text-pink-600"></i>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold uppercase">Follow Me</p>
+                                <p class="text-sm font-bold text-brand-navy">@the_petite_footstep</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: What I Create -->
+    <!-- Images Used: (3) Purple Jacket, (2) White Dress, (1) Insta Frame -->
+    <section id="create" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-4xl font-bold text-brand-navy">What I Create 🎥</h2>
+                <div class="w-24 h-1 bg-brand-pink mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Collage -->
+                <div class="relative h-[600px] w-full reveal">
+                    <!-- Image 1: Purple Jacket (Lifestyle) -->
+                    <div class="absolute top-0 left-0 w-2/3 h-64 transform -rotate-3 hover:rotate-0 transition duration-500 z-10 group">
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (3).jpeg" alt="Lifestyle" class="w-full h-full object-cover rounded-xl shadow-lg border-4 border-white group-hover:scale-105 transition">
+                    </div>
+                    <!-- Image 2: White Dress (Travel) -->
+                    <div class="absolute top-40 right-0 w-3/5 h-64 transform rotate-6 hover:rotate-0 transition duration-500 z-20 group">
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (2).jpeg" alt="Travel" class="w-full h-full object-cover rounded-xl shadow-lg border-4 border-white group-hover:scale-105 transition">
+                    </div>
+                    <!-- Image 3: Instagram Frame -->
+                    <div class="absolute bottom-0 left-10 w-2/3 h-72 transform -rotate-2 hover:rotate-0 transition duration-500 z-30 group">
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (1).jpeg" alt="Social" class="w-full h-full object-cover rounded-xl shadow-lg border-4 border-white group-hover:scale-105 transition">
+                    </div>
+                </div>
+
+                <!-- Content List -->
+                <div class="space-y-8 reveal delay-200">
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 p-4 rounded-lg hover:bg-brand-light transition group">
+                            <span class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                                <i class="fas fa-microphone-lines"></i>
+                            </span>
+                            <span class="text-lg font-medium text-gray-700">Voiceover reels</span>
+                        </li>
+                        <li class="flex items-center gap-4 p-4 rounded-lg hover:bg-brand-light transition group">
+                            <span class="w-10 h-10 rounded-full bg-brand-navy text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="text-lg font-medium text-gray-700">Storytelling lifestyle videos</span>
+                        </li>
+                        <li class="flex items-center gap-4 p-4 rounded-lg hover:bg-brand-light transition group">
+                            <span class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                                <i class="fas fa-plane-departure"></i>
+                            </span>
+                            <span class="text-lg font-medium text-gray-700">Travel itineraries & hotel reviews</span>
+                        </li>
+                        <li class="flex items-center gap-4 p-4 rounded-lg hover:bg-brand-light transition group">
+                            <span class="w-10 h-10 rounded-full bg-brand-navy text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                                <i class="fas fa-utensils"></i>
+                            </span>
+                            <span class="text-lg font-medium text-gray-700">Food content & restaurant showcases</span>
+                        </li>
+                        <li class="flex items-center gap-4 p-4 rounded-lg hover:bg-brand-light transition group">
+                            <span class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            <span class="text-lg font-medium text-gray-700">UGC & Brand Storytelling</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 p-6 bg-brand-cream border border-gray-100 rounded-xl">
+                        <p class="font-heading font-bold text-brand-navy text-center tracking-wide uppercase">
+                            ✨ Relatable, fun, minimal aesthetic
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: Impact & Reach -->
+    <!-- Image Used: (3) Purple Jacket as background -->
+    <section id="impact" class="relative py-24 bg-fixed bg-cover bg-center" style="background-image: url('WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (3).jpeg');">
+        <!-- Overlay - Lighter to show image -->
+        <div class="absolute inset-0 bg-brand-navy/60 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-md">My Impact & Reach 📊</h2>
+                <p class="text-white/90 text-lg">Connecting brands with engaged audiences</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Stat Card 1 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-2xl p-6 text-center transform hover:-translate-y-2 transition duration-300 shadow-xl reveal delay-100 border border-white/20">
+                    <div class="text-brand-pink text-3xl mb-3"><i class="fas fa-users"></i></div>
+                    <h3 class="text-4xl font-extrabold text-brand-navy">3,513</h3>
+                    <p class="text-gray-600 font-medium uppercase text-sm mt-2">Followers (Growing Daily)</p>
+                </div>
+                <!-- Stat Card 2 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-2xl p-6 text-center transform hover:-translate-y-2 transition duration-300 shadow-xl reveal delay-200 border border-white/20">
+                    <div class="text-brand-pink text-3xl mb-3"><i class="fas fa-eye"></i></div>
+                    <h3 class="text-4xl font-extrabold text-brand-navy">10-15K</h3>
+                    <p class="text-gray-600 font-medium uppercase text-sm mt-2">Avg Views per Reel</p>
+                </div>
+                <!-- Stat Card 3 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-2xl p-6 text-center transform hover:-translate-y-2 transition duration-300 shadow-xl reveal delay-300 border border-white/20">
+                    <div class="text-brand-pink text-3xl mb-3"><i class="fas fa-trophy"></i></div>
+                    <h3 class="text-4xl font-extrabold text-brand-navy">1.1M</h3>
+                    <p class="text-gray-600 font-medium uppercase text-sm mt-2">Top Video Views</p>
+                </div>
+                <!-- Stat Card 4 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-2xl p-6 text-center transform hover:-translate-y-2 transition duration-300 shadow-xl reveal delay-400 border border-white/20">
+                    <div class="text-brand-pink text-3xl mb-3"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-4xl font-extrabold text-brand-navy">2M+</h3>
+                    <p class="text-gray-600 font-medium uppercase text-sm mt-2">Views in Last 30 Days</p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-8 text-center reveal delay-500">
+                    <i class="fas fa-quote-left text-white/70 text-2xl mb-4"></i>
+                    <p class="text-white text-xl md:text-2xl font-light italic drop-shadow-md">
+                        "Highly engaged storytelling audience. A Desi audience who trust recommendations."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: Brands -->
+    <!-- Images Used: (4) Paytm, (2) White Dress, (3) Purple Jacket -->
+    <section id="brands" class="py-24 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-4xl font-bold text-brand-navy text-center mb-16 reveal">Brands I’ve Worked With 🤝</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Brand List -->
+                <div class="lg:col-span-4 reveal">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 h-full">
+                        <ul class="grid grid-cols-1 gap-4">
+                            <!-- Brand Items -->
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Paytm</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Aspora</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Haldiram’s</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Karunyashree Sarees</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Swadesi Sakhis</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Crispy Dosa</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Madras Cart</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">Amya Sarees</span>
+                            </li>
+                            <li class="flex items-center space-x-3 p-3 rounded hover:bg-gray-50 transition border-b border-gray-100 last:border-0">
+                                <i class="fas fa-check-circle text-brand-pink"></i>
+                                <span class="font-bold text-lg text-gray-700">VKaapi</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Visual Proof (Paytm Screenshot) -->
+                <div class="lg:col-span-4 flex justify-center items-center reveal delay-200">
+                    <div class="relative w-72 h-auto rounded-[2.5rem] border-[10px] border-gray-900 shadow-2xl overflow-hidden bg-black transform hover:scale-105 transition duration-500">
+                         <!-- Using Paytm Screenshot -->
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (4).jpeg" alt="Paytm Collaboration" class="w-full h-full object-cover">
+                        <!-- Phone Notch -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-xl z-20"></div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Decoration -->
+                <div class="lg:col-span-4 flex flex-col gap-6 reveal delay-300 justify-center">
+                    <!-- White Dress by Lake -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+                        <div class="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/20 transition z-10"></div>
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (2).jpeg" alt="Lifestyle 1" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <!-- Purple Jacket by Lake -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+                        <div class="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/20 transition z-10"></div>
+                        <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (3).jpeg" alt="Lifestyle 2" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: What I Offer -->
+    <!-- Image Used: (2) White Dress as visual accent -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <!-- Visual Accent Background -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-full opacity-5 pointer-events-none hidden lg:block">
+            <img src="WhatsApp Unknown 2025-12-06 at 13.02.34.zip/WhatsApp Image 2025-12-06 at 12.42.58 (2).jpeg" alt="Water Texture" class="w-full h-full object-cover grayscale">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 reveal">
+                <span class="text-brand-pink font-bold tracking-widest uppercase">Services</span>
+                <h2 class="font-heading text-4xl font-bold text-brand-navy mt-2">What I Offer 💼</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group bg-brand-cream reveal">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl text-brand-navy shadow-sm mb-6 group-hover:bg-brand-pink group-hover:text-white transition">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">UGC Videos</h3>
+                    <p class="text-gray-600">Authentic, engaging user-generated content for your brand.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group bg-brand-cream reveal delay-100">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl text-brand-navy shadow-sm mb-6 group-hover:bg-brand-pink group-hover:text-white transition">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Travel & Hotel</h3>
+                    <p class="text-gray-600">Itineraries, hotel reviews, and activity showcases.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group bg-brand-cream reveal delay-200">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl text-brand-navy shadow-sm mb-6 group-hover:bg-brand-pink group-hover:text-white transition">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Food & Restaurant</h3>
+                    <p class="text-gray-600">Mouth-watering showcases and reviews.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group bg-brand-cream reveal">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl text-brand-navy shadow-sm mb-6 group-hover:bg-brand-pink group-hover:text-white transition">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Product Videos</h3>
+                    <p class="text-gray-600">Unboxing and product demos that convert.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group bg-brand-cream reveal delay-100">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl text-brand-navy shadow-sm mb-6 group-hover:bg-brand-pink group-hover:text-white transition">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Voiceover Storytelling</h3>
+                    <p class="text-gray-600">Warm, friendly narration that guides the viewer.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition group bg-brand-cream reveal delay-200">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl text-brand-navy shadow-sm mb-6 group-hover:bg-brand-pink group-hover:text-white transition">
+                        <i class="fas fa-photo-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Dedicated Sets</h3>
+                    <p class="text-gray-600">Full Reel/Story sets tailored to your campaign.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center reveal">
+                <span class="inline-block px-6 py-2 border border-brand-navy rounded-full text-brand-navy font-semibold tracking-wide">
+                    MINIMALISTIC + CLEAN AESTHETIC
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: Let's Work Together -->
+    <section id="contact" class="py-24 bg-brand-navy text-white relative overflow-hidden">
+        <!-- Decor -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-pink rounded-full mix-blend-screen filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-screen filter blur-3xl opacity-10 translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Left: Pitch & Targets -->
+                <div class="space-y-10 reveal">
+                    <div>
+                        <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Let’s Work Together ✈️✨</h2>
+                        <p class="text-xl text-blue-200">I want to collaborate with:</p>
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <span class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/20 transition cursor-default">Airlines</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/20 transition cursor-default">Hotels</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/20 transition cursor-default">Restaurants</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/20 transition cursor-default">Supermarkets</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/20 transition cursor-default">Fashion Brands</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/20 transition cursor-default">Tourism Boards</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-brand-pink">Why Me?</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check mt-1 text-brand-pink"></i>
+                                <span>Trustable + Relatable personality</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check mt-1 text-brand-pink"></i>
+                                <span>Storytelling that converts viewers to customers</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check mt-1 text-brand-pink"></i>
+                                <span>Indian creator showing UK life for Desi audience</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check mt-1 text-brand-pink"></i>
+                                <span>Creative, clean, minimal aesthetic</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check mt-1 text-brand-pink"></i>
+                                <span>Strong voiceover skills</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Contact -->
+                <div class="bg-white text-gray-800 rounded-3xl p-10 shadow-2xl reveal delay-200">
+                    <h3 class="font-heading text-3xl font-bold text-brand-navy mb-8">Get In Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <a href="mailto:your-email@example.com" class="flex items-center gap-6 group p-4 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition">
+                            <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-pink text-xl group-hover:scale-110 transition">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase">Email Me</p>
+                                <p class="text-xl font-medium text-brand-navy">[Your Email Here]</p>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/the_petite_footstep" target="_blank" class="flex items-center gap-6 group p-4 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition">
+                            <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-pink text-xl group-hover:scale-110 transition">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase">DM on Instagram</p>
+                                <p class="text-xl font-medium text-brand-navy">@the_petite_footstep</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mt-10 pt-8 border-t border-gray-100 text-center">
+                        <p class="text-gray-400 text-sm">© 2024 Shama. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
